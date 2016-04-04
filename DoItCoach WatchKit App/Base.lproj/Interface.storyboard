@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DoItCoach_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Label" textAlignment="left" minimumScaleFactor="0.69999999999999996" id="bUc-Uq-I5O">
+                            <color key="textColor" red="0.22064818778338388" green="0.43764127550828313" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="ultraLight" pointSize="17"/>
+                        </label>
+                        <group width="1" height="0.90000000000000002" alignment="center" verticalAlignment="center" backgroundImage="Time12" animationDuration="25" layout="vertical" id="wyJ-Y2-GKo">
+                            <items>
+                                <button alignment="left" verticalAlignment="center" semanticContentAttribute="spatial" id="52d-rN-Bm9" userLabel="StartButton">
+                                    <group key="contentGroup" width="1" height="0.90000000000000002" alignment="left" contentMode="center" layout="vertical" spacing="0.0" id="4ZQ-XI-I0p" userLabel="StartButtonGroup">
+                                        <items>
+                                            <imageView alignment="center" verticalAlignment="center" image="Start" id="3BZ-W7-cAU"/>
+                                            <timer alignment="center" verticalAlignment="center" hidden="YES" id="6Bf-gb-Zh3">
+                                                <color key="textColor" red="0.22064818780000001" green="0.43764127549999998" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="27"/>
+                                                <calendarUnit key="units" minute="YES" second="YES"/>
+                                            </timer>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="16" bottom="10"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="onStartButton" destination="AgC-eL-Hgc" id="nNG-Z4-Z9Q"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="27i-5w-IEK">
+                        <items>
+                            <menuItem title="stop" icon="decline" id="AmD-4o-A2J">
+                                <connections>
+                                    <action selector="stop" destination="AgC-eL-Hgc" id="8b3-4a-FC9"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Menu Item" icon="accept" id="CTp-5t-QuM"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="group" destination="wyJ-Y2-GKo" id="jwi-Xg-nGA"/>
+                        <outlet property="startButton" destination="52d-rN-Bm9" id="Y9O-vn-Cti"/>
+                        <outlet property="startButtonImage" destination="3BZ-W7-cAU" id="0Ts-8n-6ZI"/>
+                        <outlet property="taskNameLabel" destination="bUc-Uq-I5O" id="Wzv-yl-twT"/>
+                        <outlet property="timer" destination="6Bf-gb-Zh3" id="UPG-DN-75s"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="DoItCoach_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="6hd-y5-hLY">
+                                    <color key="textColor" red="0.43456700542423804" green="0.68367626073588106" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" id="uCw-4Q-Ouw">
+                            <items>
+                                <group width="0.75" height="114.5" alignment="center" verticalAlignment="center" backgroundImage="Time12" animationDuration="25" layout="vertical" id="sB8-e2-TSr">
+                                    <items>
+                                        <group width="1" height="107.5" alignment="left" contentMode="center" layout="vertical" spacing="0.0" id="8uC-ai-1er" userLabel="StartButtonGroup">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <edgeInsets key="margins" left="0.0" right="0.0" top="16" bottom="10"/>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="group" destination="sB8-e2-TSr" id="gB2-w0-MUs"/>
+                        <outlet property="taskName" destination="6hd-y5-hLY" id="5jw-Rz-CUU"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="DoItCoach_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>

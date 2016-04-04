@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		487886371CB2AF7000FFB3D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886361CB2AF7000FFB3D7 /* AppDelegate.swift */; };
+		4878863C1CB2AF7000FFB3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878863A1CB2AF7000FFB3D7 /* Main.storyboard */; };
+		4878863E1CB2AF7000FFB3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */; };
+		487886411CB2AF7000FFB3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878863F1CB2AF7000FFB3D7 /* LaunchScreen.storyboard */; };
+		487886461CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */; };
+		4878864C1CB2AF7000FFB3D7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878864A1CB2AF7000FFB3D7 /* Interface.storyboard */; };
+		4878864E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878864D1CB2AF7000FFB3D7 /* Assets.xcassets */; };
+		487886551CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4878865A1CB2AF7100FFB3D7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886591CB2AF7100FFB3D7 /* InterfaceController.swift */; };
+		4878865C1CB2AF7100FFB3D7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878865B1CB2AF7100FFB3D7 /* ExtensionDelegate.swift */; };
+		4878865E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878865D1CB2AF7100FFB3D7 /* Assets.xcassets */; };
+		487886701CB2B10F00FFB3D7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866E1CB2B10F00FFB3D7 /* Task.swift */; };
+		487886711CB2B10F00FFB3D7 /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */; };
+		487886761CB2B12C00FFB3D7 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886731CB2B12C00FFB3D7 /* ColorCell.swift */; };
+		487886771CB2B12C00FFB3D7 /* NewTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886741CB2B12C00FFB3D7 /* NewTaskCell.swift */; };
+		487886781CB2B12C00FFB3D7 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886751CB2B12C00FFB3D7 /* TaskCell.swift */; };
+		4878867C1CB2B14A00FFB3D7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886791CB2B14A00FFB3D7 /* CircleView.swift */; };
+		4878867D1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */; };
+		4878867E1CB2B14A00FFB3D7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */; };
+		4878867F1CB2B1CC00FFB3D7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866E1CB2B10F00FFB3D7 /* Task.swift */; };
+		487886801CB2B1CC00FFB3D7 /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		487886471CB2AF7000FFB3D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4878862B1CB2AF7000FFB3D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 487886441CB2AF7000FFB3D7;
+			remoteInfo = "DoItCoach WatchKit App";
+		};
+		487886561CB2AF7100FFB3D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4878862B1CB2AF7000FFB3D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 487886531CB2AF7100FFB3D7;
+			remoteInfo = "DoItCoach WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		487886651CB2AF7100FFB3D7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				487886551CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		487886691CB2AF7100FFB3D7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				487886461CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		487886331CB2AF7000FFB3D7 /* DoItCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoItCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		487886361CB2AF7000FFB3D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4878863B1CB2AF7000FFB3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		487886401CB2AF7000FFB3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		487886421CB2AF7000FFB3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DoItCoach WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4878864B1CB2AF7000FFB3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		4878864D1CB2AF7000FFB3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4878864F1CB2AF7100FFB3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DoItCoach WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		487886591CB2AF7100FFB3D7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4878865B1CB2AF7100FFB3D7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		4878865D1CB2AF7100FFB3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4878865F1CB2AF7100FFB3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4878866E1CB2B10F00FFB3D7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = DoItCoach/Task.swift; sourceTree = "<group>"; };
+		4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksManager.swift; path = DoItCoach/TasksManager.swift; sourceTree = "<group>"; };
+		487886731CB2B12C00FFB3D7 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorCell.swift; path = Views/ColorCell.swift; sourceTree = "<group>"; };
+		487886741CB2B12C00FFB3D7 /* NewTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewTaskCell.swift; path = Views/NewTaskCell.swift; sourceTree = "<group>"; };
+		487886751CB2B12C00FFB3D7 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskCell.swift; path = Views/TaskCell.swift; sourceTree = "<group>"; };
+		487886791CB2B14A00FFB3D7 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailledTaskViewController.swift; sourceTree = "<group>"; };
+		4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		487886301CB2AF7000FFB3D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		487886511CB2AF7100FFB3D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4878862A1CB2AF7000FFB3D7 = {
+			isa = PBXGroup;
+			children = (
+				4878866D1CB2B0F700FFB3D7 /* Shared */,
+				487886351CB2AF7000FFB3D7 /* DoItCoach */,
+				487886491CB2AF7000FFB3D7 /* DoItCoach WatchKit App */,
+				487886581CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */,
+				487886341CB2AF7000FFB3D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		487886341CB2AF7000FFB3D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				487886331CB2AF7000FFB3D7 /* DoItCoach.app */,
+				487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */,
+				487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		487886351CB2AF7000FFB3D7 /* DoItCoach */ = {
+			isa = PBXGroup;
+			children = (
+				487886721CB2B11E00FFB3D7 /* Views */,
+				487886361CB2AF7000FFB3D7 /* AppDelegate.swift */,
+				487886791CB2B14A00FFB3D7 /* CircleView.swift */,
+				4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */,
+				4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */,
+				4878863A1CB2AF7000FFB3D7 /* Main.storyboard */,
+				4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */,
+				4878863F1CB2AF7000FFB3D7 /* LaunchScreen.storyboard */,
+				487886421CB2AF7000FFB3D7 /* Info.plist */,
+			);
+			path = DoItCoach;
+			sourceTree = "<group>";
+		};
+		487886491CB2AF7000FFB3D7 /* DoItCoach WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				4878864A1CB2AF7000FFB3D7 /* Interface.storyboard */,
+				4878864D1CB2AF7000FFB3D7 /* Assets.xcassets */,
+				4878864F1CB2AF7100FFB3D7 /* Info.plist */,
+			);
+			path = "DoItCoach WatchKit App";
+			sourceTree = "<group>";
+		};
+		487886581CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				487886591CB2AF7100FFB3D7 /* InterfaceController.swift */,
+				4878865B1CB2AF7100FFB3D7 /* ExtensionDelegate.swift */,
+				4878865D1CB2AF7100FFB3D7 /* Assets.xcassets */,
+				4878865F1CB2AF7100FFB3D7 /* Info.plist */,
+			);
+			path = "DoItCoach WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		4878866D1CB2B0F700FFB3D7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4878866E1CB2B10F00FFB3D7 /* Task.swift */,
+				4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		487886721CB2B11E00FFB3D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				487886731CB2B12C00FFB3D7 /* ColorCell.swift */,
+				487886741CB2B12C00FFB3D7 /* NewTaskCell.swift */,
+				487886751CB2B12C00FFB3D7 /* TaskCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		487886321CB2AF7000FFB3D7 /* DoItCoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4878866A1CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach" */;
+			buildPhases = (
+				4878862F1CB2AF7000FFB3D7 /* Sources */,
+				487886301CB2AF7000FFB3D7 /* Frameworks */,
+				487886311CB2AF7000FFB3D7 /* Resources */,
+				487886691CB2AF7100FFB3D7 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				487886481CB2AF7000FFB3D7 /* PBXTargetDependency */,
+			);
+			name = DoItCoach;
+			productName = DoItCoach;
+			productReference = 487886331CB2AF7000FFB3D7 /* DoItCoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+		487886441CB2AF7000FFB3D7 /* DoItCoach WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 487886661CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit App" */;
+			buildPhases = (
+				487886431CB2AF7000FFB3D7 /* Resources */,
+				487886651CB2AF7100FFB3D7 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				487886571CB2AF7100FFB3D7 /* PBXTargetDependency */,
+			);
+			name = "DoItCoach WatchKit App";
+			productName = "DoItCoach WatchKit App";
+			productReference = 487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		487886531CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 487886621CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit Extension" */;
+			buildPhases = (
+				487886501CB2AF7100FFB3D7 /* Sources */,
+				487886511CB2AF7100FFB3D7 /* Frameworks */,
+				487886521CB2AF7100FFB3D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DoItCoach WatchKit Extension";
+			productName = "DoItCoach WatchKit Extension";
+			productReference = 487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4878862B1CB2AF7000FFB3D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = corinnekrych;
+				TargetAttributes = {
+					487886321CB2AF7000FFB3D7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					487886441CB2AF7000FFB3D7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					487886531CB2AF7100FFB3D7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 4878862E1CB2AF7000FFB3D7 /* Build configuration list for PBXProject "DoItCoach" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4878862A1CB2AF7000FFB3D7;
+			productRefGroup = 487886341CB2AF7000FFB3D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				487886321CB2AF7000FFB3D7 /* DoItCoach */,
+				487886441CB2AF7000FFB3D7 /* DoItCoach WatchKit App */,
+				487886531CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		487886311CB2AF7000FFB3D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				487886411CB2AF7000FFB3D7 /* LaunchScreen.storyboard in Resources */,
+				4878863E1CB2AF7000FFB3D7 /* Assets.xcassets in Resources */,
+				4878863C1CB2AF7000FFB3D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		487886431CB2AF7000FFB3D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4878864E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */,
+				4878864C1CB2AF7000FFB3D7 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		487886521CB2AF7100FFB3D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4878865E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4878862F1CB2AF7000FFB3D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4878867C1CB2B14A00FFB3D7 /* CircleView.swift in Sources */,
+				487886781CB2B12C00FFB3D7 /* TaskCell.swift in Sources */,
+				487886701CB2B10F00FFB3D7 /* Task.swift in Sources */,
+				487886711CB2B10F00FFB3D7 /* TasksManager.swift in Sources */,
+				4878867D1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift in Sources */,
+				487886771CB2B12C00FFB3D7 /* NewTaskCell.swift in Sources */,
+				4878867E1CB2B14A00FFB3D7 /* TasksViewController.swift in Sources */,
+				487886761CB2B12C00FFB3D7 /* ColorCell.swift in Sources */,
+				487886371CB2AF7000FFB3D7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		487886501CB2AF7100FFB3D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4878867F1CB2B1CC00FFB3D7 /* Task.swift in Sources */,
+				487886801CB2B1CC00FFB3D7 /* TasksManager.swift in Sources */,
+				4878865C1CB2AF7100FFB3D7 /* ExtensionDelegate.swift in Sources */,
+				4878865A1CB2AF7100FFB3D7 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		487886481CB2AF7000FFB3D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 487886441CB2AF7000FFB3D7 /* DoItCoach WatchKit App */;
+			targetProxy = 487886471CB2AF7000FFB3D7 /* PBXContainerItemProxy */;
+		};
+		487886571CB2AF7100FFB3D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 487886531CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */;
+			targetProxy = 487886561CB2AF7100FFB3D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4878863A1CB2AF7000FFB3D7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4878863B1CB2AF7000FFB3D7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4878863F1CB2AF7000FFB3D7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				487886401CB2AF7000FFB3D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4878864A1CB2AF7000FFB3D7 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4878864B1CB2AF7000FFB3D7 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		487886601CB2AF7100FFB3D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		487886611CB2AF7100FFB3D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		487886631CB2AF7100FFB3D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DoItCoach WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		487886641CB2AF7100FFB3D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "DoItCoach WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		487886671CB2AF7100FFB3D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DoItCoach_WatchKit_Extension;
+				INFOPLIST_FILE = "DoItCoach WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		487886681CB2AF7100FFB3D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DoItCoach_WatchKit_Extension;
+				INFOPLIST_FILE = "DoItCoach WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		4878866B1CB2AF7100FFB3D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoItCoach/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4878866C1CB2AF7100FFB3D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DoItCoach/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4878862E1CB2AF7000FFB3D7 /* Build configuration list for PBXProject "DoItCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				487886601CB2AF7100FFB3D7 /* Debug */,
+				487886611CB2AF7100FFB3D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		487886621CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				487886631CB2AF7100FFB3D7 /* Debug */,
+				487886641CB2AF7100FFB3D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		487886661CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				487886671CB2AF7100FFB3D7 /* Debug */,
+				487886681CB2AF7100FFB3D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4878866A1CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4878866B1CB2AF7100FFB3D7 /* Debug */,
+				4878866C1CB2AF7100FFB3D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4878862B1CB2AF7000FFB3D7 /* Project object */;
+}
