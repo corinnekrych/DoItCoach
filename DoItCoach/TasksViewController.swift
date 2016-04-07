@@ -17,6 +17,15 @@ class TasksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        HealthKitManager.instance.authorizeHealthKitAccess({ (success, error) -> Void in
+            if success == true {
+                print("HK iOS SUCCESS AUTHORIZED")
+            } else {
+                print("HK iOS ERROR")
+            }
+        })
+        
+        
         tableView.backgroundColor = UIColor.blackColor()
         tableView.separatorStyle = .None
         loadSavedTasks()

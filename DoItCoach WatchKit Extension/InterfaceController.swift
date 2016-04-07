@@ -25,6 +25,14 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
+        HealthKitManager.instance.authorizeHealthKitAccess({ (success, error) -> Void in
+            if success == true {
+                print("HK SUCCESS AUTHORIZED")
+            } else {
+                print("HK ERROR")
+            }
+        })
+        
         guard let currentTask = tasksMgr.currentTask else {return}
         display(currentTask)
         if let _ = currentTask.startDate where currentTask.endDate == nil {
@@ -99,18 +107,29 @@ class InterfaceController: WKInterfaceController {
         print("onStartButton")
         guard let currentTask = tasksMgr.currentTask else {return}
         if !currentTask.isStarted() {
-            print("currentActivitied:\(currentTask.name):")
-            let duration = NSDate(timeIntervalSinceNow: currentTask.duration)
-            timer.setDate(duration)
-            timer.start()
-            timerFire = NSTimer.scheduledTimerWithTimeInterval(currentTask.duration, target: self, selector: "fire", userInfo: nil, repeats: false)
-            currentTask.start()
-            group.setBackgroundImageNamed("Time")
-            group.startAnimatingWithImagesInRange(NSMakeRange(0, 90), duration: currentTask.duration, repeatCount: 1)
-            startButtonImage.setHidden(true)
-            timer.setHidden(false)
-            sendStartTimer(currentTask.name, startDate: currentTask.startDate, endDate: currentTask.endDate)
+            start(currentTask)
         }
+    }
+    
+    var workoutSession: WorkoutSessionService?
+    
+    func start(currentTask: TaskActivity) {
+        print("currentActivitied:\(currentTask.name):")
+        let duration = NSDate(timeIntervalSinceNow: currentTask.duration)
+        timer.setDate(duration)
+        timer.start()
+        timerFire = NSTimer.scheduledTimerWithTimeInterval(currentTask.duration, target: self, selector: "fire", userInfo: nil, repeats: false)
+        currentTask.start()
+        // if the task is a break, monitor HR
+        if currentTask.type == .Break || currentTask.type == .LongBreak {
+            workoutSession = WorkoutSessionService(task: currentTask)
+            workoutSession!.startSession()
+        }
+        group.setBackgroundImageNamed("Time")
+        group.startAnimatingWithImagesInRange(NSMakeRange(0, 90), duration: currentTask.duration, repeatCount: 1)
+        startButtonImage.setHidden(true)
+        timer.setHidden(false)
+        sendStartTimer(currentTask.name, startDate: currentTask.startDate, endDate: currentTask.endDate)
     }
     
     func sendStartTimer(taskName: String, startDate: NSDate?, endDate: NSDate?) {
@@ -160,6 +179,12 @@ class InterfaceController: WKInterfaceController {
         // init for next
         group.setBackgroundImageNamed("Time0")
         display(tasksMgr.currentTask)
+        if current.type == .Break || current.type == .LongBreak {
+            if let workoutSession = workoutSession {
+                workoutSession.stopSession()
+                workoutSession.saveSession()
+            }
+        }
         sendStartTimer(current.name, startDate: current.startDate, endDate: current.endDate)
     }
     

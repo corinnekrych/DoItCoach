@@ -19,6 +19,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             session.delegate = self
             session.activateSession()
         }
+
     }
 
     func applicationDidBecomeActive() {

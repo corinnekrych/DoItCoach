@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
@@ -21,6 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
                     session.activateSession()
                 }
         return true
+    }
+    
+    let healthStore = HKHealthStore()
+    func applicationShouldRequestHealthAuthorization(application:
+        UIApplication) {
+        healthStore.handleAuthorizationForExtensionWithCompletion {
+        success, error in
+        if success == true {
+        print("HK iOS SUCCESS AUTHORIZED (launched from watch)")
+    } else {
+        print("HK iOS ERROR (launched from watch)")
+        }
+        }
     }
 }
 
