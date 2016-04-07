@@ -8,6 +8,7 @@
 
 import Foundation
 import HealthKit
+import WatchKit
 
 extension HealthKitManager {
 
@@ -22,30 +23,44 @@ extension HealthKitManager {
                 startDate: start,
                 endDate: end,
                 duration: end.timeIntervalSinceDate(start),
-                totalEnergyBurned: HKQuantity(unit: HKUnit.kilocalorieUnit(), doubleValue: 10.0),
-                totalDistance: HKQuantity(unit: HKUnit.meterUnit(), doubleValue: 10.0),
+                totalEnergyBurned: workoutService.energyBurned,
+                totalDistance: workoutService.distance,
                 device: HKDevice.localDevice(),
-                metadata: ["TaskType": task.type.rawValue == 0 ? "Task" : "Break"])
-            
+                metadata: nil)
+            print("Save workout 0 \(workout)")
             // Collect the sampled data
             var samples: [HKQuantitySample] = [HKQuantitySample]()
             samples += workoutService.hrData
             samples += workoutService.distanceData
             samples += workoutService.energyData
-            print("Save workout 1")
+            print("Save workout 1 \(samples)")
             // Save the workout
-            store.saveObject(workout) { success, error in
-                if (!success || samples.count == 0) {
-                    completion(success, error)
-                    return
+            if let authorizationStatus = healthStore?.authorizationStatusForType(heartRateType!) {
+                
+                switch authorizationStatus {
+                    
+                case .NotDetermined:
+                    authorizeHealthKitAccess { _ in
+                    }
+                    
+                case .SharingDenied:
+                    print("ERROR")
+                    
+                case .SharingAuthorized:
+                    store.saveObject(workout) { success, error in
+                        if let error = error {
+                            print("Save workout ERROR \(error)")
+                        }
+                        print("Save workout 2")
+                        // If there are samples to save, add them to the workout
+                        store.addSamples(samples, toWorkout: workout, completion: { success, error  in
+                            print("Save workout 3 \(success)")
+                            completion(success, error)
+                        })
+                    }
                 }
-                print("Save workout 2")
-                // If there are samples to save, add them to the workout
-                store.addSamples(samples, toWorkout: workout, completion: { success, error  in
-                    print("Save workout 3")
-                    completion(success, error)
-                })
             }
     }
 
 }
+
