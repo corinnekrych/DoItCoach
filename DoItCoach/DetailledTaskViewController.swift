@@ -1,3 +1,11 @@
+//
+//  DetailledActivityViewController.swift
+//  Pom
+//
+//  Created by Corinne Krych on 02/03/16.
+//  Copyright © 2016 corinne. All rights reserved.
+//
+
 import UIKit
 
 public class DetailledTaskViewController: UIViewController {
@@ -10,7 +18,7 @@ public class DetailledTaskViewController: UIViewController {
         if task.isStarted() {
             displayError("Already started", viewController: self)
         } else if task.endDate == nil {
-            if task.name == TasksManager.instance.currentTask?.name {                
+            if task.name == TasksManager.instance.currentTask?.name {
                 NSNotificationCenter.defaultCenter().postNotificationName("TimerStarted", object: ["task":task, "sender":"ios"])
             } else {
                 displayError("Do your tasks in order :P", viewController: self)
@@ -45,17 +53,8 @@ public class DetailledTaskViewController: UIViewController {
     @objc public func timerFired(note: NSNotification) {
         if let userInfo = note.object, taskFromNotification = userInfo["task"] as? TaskActivity where taskFromNotification.name == self.task.name {
             saveTasks()
-            if let sender = userInfo["sender"] as? String where sender == "watch" {
-                print("::Task fired from watch")
-            } else {
-                print("::Task fired from iOS")
-                sendTasksToAppleWatch(self)
-            }
-            print("iOS app::TimerFired::TaskNotification::\(taskFromNotification)")
-            dispatch_async(dispatch_get_main_queue()) {
-                self.startButton.setTitle("Done", forState: .Normal)
-                self.startButton.setTitle("Done", forState: .Selected)
-            }
+            self.startButton.setTitle("Done", forState: .Normal)
+            self.startButton.setTitle("Done", forState: .Selected)
         }
         print("iOS app::TimerFired::note::\(note)")
     }
@@ -64,19 +63,13 @@ public class DetailledTaskViewController: UIViewController {
         if let userInfo = note.object, let taskFromNotification = userInfo["task"] as? TaskActivity where taskFromNotification.name == self.task.name {
             if let sender = userInfo["sender"] as? String where sender == "ios" {
                 task.start()
-                sendTaskToAppleWatch(task, viewController: self)
             }
             saveTasks()
-            dispatch_async(dispatch_get_main_queue()) {
-                self.startButton.setTitle("Stop", forState: .Normal)
-                self.startButton.setTitle("Stop", forState: .Selected)
-                let now = NSDate()
-                let spent = now.timeIntervalSinceReferenceDate - (taskFromNotification.startDate?.timeIntervalSinceReferenceDate)!
-                self.circleView.animateCircle(spent, color:taskFromNotification.type.color, duration: taskFromNotification.duration)
-            }
+            self.startButton.setTitle("Stop", forState: .Normal)
+            self.startButton.setTitle("Stop", forState: .Selected)
+            self.circleView.animateCircle(0, color:taskFromNotification.type.color, duration: taskFromNotification.duration)
         }
         print("iOS app::TimerStarted::note::\(note)")
     }
 }
-
 

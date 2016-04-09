@@ -11,13 +11,6 @@
 		4878863C1CB2AF7000FFB3D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878863A1CB2AF7000FFB3D7 /* Main.storyboard */; };
 		4878863E1CB2AF7000FFB3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */; };
 		487886411CB2AF7000FFB3D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878863F1CB2AF7000FFB3D7 /* LaunchScreen.storyboard */; };
-		487886461CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */; };
-		4878864C1CB2AF7000FFB3D7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4878864A1CB2AF7000FFB3D7 /* Interface.storyboard */; };
-		4878864E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878864D1CB2AF7000FFB3D7 /* Assets.xcassets */; };
-		487886551CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		4878865A1CB2AF7100FFB3D7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886591CB2AF7100FFB3D7 /* InterfaceController.swift */; };
-		4878865C1CB2AF7100FFB3D7 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878865B1CB2AF7100FFB3D7 /* ExtensionDelegate.swift */; };
-		4878865E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4878865D1CB2AF7100FFB3D7 /* Assets.xcassets */; };
 		487886701CB2B10F00FFB3D7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866E1CB2B10F00FFB3D7 /* Task.swift */; };
 		487886711CB2B10F00FFB3D7 /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */; };
 		487886761CB2B12C00FFB3D7 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886731CB2B12C00FFB3D7 /* ColorCell.swift */; };
@@ -26,46 +19,15 @@
 		4878867C1CB2B14A00FFB3D7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886791CB2B14A00FFB3D7 /* CircleView.swift */; };
 		4878867D1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */; };
 		4878867E1CB2B14A00FFB3D7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */; };
-		4878867F1CB2B1CC00FFB3D7 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866E1CB2B10F00FFB3D7 /* Task.swift */; };
-		487886801CB2B1CC00FFB3D7 /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		487886471CB2AF7000FFB3D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4878862B1CB2AF7000FFB3D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 487886441CB2AF7000FFB3D7;
-			remoteInfo = "DoItCoach WatchKit App";
-		};
-		487886561CB2AF7100FFB3D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4878862B1CB2AF7000FFB3D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 487886531CB2AF7100FFB3D7;
-			remoteInfo = "DoItCoach WatchKit Extension";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		487886651CB2AF7100FFB3D7 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				487886551CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		487886691CB2AF7100FFB3D7 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				487886461CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,15 +41,6 @@
 		4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		487886401CB2AF7000FFB3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		487886421CB2AF7000FFB3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DoItCoach WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4878864B1CB2AF7000FFB3D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		4878864D1CB2AF7000FFB3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4878864F1CB2AF7100FFB3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DoItCoach WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		487886591CB2AF7100FFB3D7 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		4878865B1CB2AF7100FFB3D7 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		4878865D1CB2AF7100FFB3D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4878865F1CB2AF7100FFB3D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4878866E1CB2B10F00FFB3D7 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = DoItCoach/Task.swift; sourceTree = "<group>"; };
 		4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksManager.swift; path = DoItCoach/TasksManager.swift; sourceTree = "<group>"; };
 		487886731CB2B12C00FFB3D7 /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorCell.swift; path = Views/ColorCell.swift; sourceTree = "<group>"; };
@@ -106,13 +59,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		487886511CB2AF7100FFB3D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,8 +67,6 @@
 			children = (
 				4878866D1CB2B0F700FFB3D7 /* Shared */,
 				487886351CB2AF7000FFB3D7 /* DoItCoach */,
-				487886491CB2AF7000FFB3D7 /* DoItCoach WatchKit App */,
-				487886581CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */,
 				487886341CB2AF7000FFB3D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,8 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				487886331CB2AF7000FFB3D7 /* DoItCoach.app */,
-				487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */,
-				487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,27 +93,6 @@
 				487886421CB2AF7000FFB3D7 /* Info.plist */,
 			);
 			path = DoItCoach;
-			sourceTree = "<group>";
-		};
-		487886491CB2AF7000FFB3D7 /* DoItCoach WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				4878864A1CB2AF7000FFB3D7 /* Interface.storyboard */,
-				4878864D1CB2AF7000FFB3D7 /* Assets.xcassets */,
-				4878864F1CB2AF7100FFB3D7 /* Info.plist */,
-			);
-			path = "DoItCoach WatchKit App";
-			sourceTree = "<group>";
-		};
-		487886581CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				487886591CB2AF7100FFB3D7 /* InterfaceController.swift */,
-				4878865B1CB2AF7100FFB3D7 /* ExtensionDelegate.swift */,
-				4878865D1CB2AF7100FFB3D7 /* Assets.xcassets */,
-				4878865F1CB2AF7100FFB3D7 /* Info.plist */,
-			);
-			path = "DoItCoach WatchKit Extension";
 			sourceTree = "<group>";
 		};
 		4878866D1CB2B0F700FFB3D7 /* Shared */ = {
@@ -208,46 +129,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				487886481CB2AF7000FFB3D7 /* PBXTargetDependency */,
 			);
 			name = DoItCoach;
 			productName = DoItCoach;
 			productReference = 487886331CB2AF7000FFB3D7 /* DoItCoach.app */;
 			productType = "com.apple.product-type.application";
-		};
-		487886441CB2AF7000FFB3D7 /* DoItCoach WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 487886661CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit App" */;
-			buildPhases = (
-				487886431CB2AF7000FFB3D7 /* Resources */,
-				487886651CB2AF7100FFB3D7 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				487886571CB2AF7100FFB3D7 /* PBXTargetDependency */,
-			);
-			name = "DoItCoach WatchKit App";
-			productName = "DoItCoach WatchKit App";
-			productReference = 487886451CB2AF7000FFB3D7 /* DoItCoach WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		487886531CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 487886621CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit Extension" */;
-			buildPhases = (
-				487886501CB2AF7100FFB3D7 /* Sources */,
-				487886511CB2AF7100FFB3D7 /* Frameworks */,
-				487886521CB2AF7100FFB3D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "DoItCoach WatchKit Extension";
-			productName = "DoItCoach WatchKit Extension";
-			productReference = 487886541CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -260,12 +146,6 @@
 				ORGANIZATIONNAME = corinnekrych;
 				TargetAttributes = {
 					487886321CB2AF7000FFB3D7 = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					487886441CB2AF7000FFB3D7 = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					487886531CB2AF7100FFB3D7 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -284,8 +164,6 @@
 			projectRoot = "";
 			targets = (
 				487886321CB2AF7000FFB3D7 /* DoItCoach */,
-				487886441CB2AF7000FFB3D7 /* DoItCoach WatchKit App */,
-				487886531CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -298,23 +176,6 @@
 				487886411CB2AF7000FFB3D7 /* LaunchScreen.storyboard in Resources */,
 				4878863E1CB2AF7000FFB3D7 /* Assets.xcassets in Resources */,
 				4878863C1CB2AF7000FFB3D7 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		487886431CB2AF7000FFB3D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4878864E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */,
-				4878864C1CB2AF7000FFB3D7 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		487886521CB2AF7100FFB3D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4878865E1CB2AF7100FFB3D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,31 +198,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		487886501CB2AF7100FFB3D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4878867F1CB2B1CC00FFB3D7 /* Task.swift in Sources */,
-				487886801CB2B1CC00FFB3D7 /* TasksManager.swift in Sources */,
-				4878865C1CB2AF7100FFB3D7 /* ExtensionDelegate.swift in Sources */,
-				4878865A1CB2AF7100FFB3D7 /* InterfaceController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		487886481CB2AF7000FFB3D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 487886441CB2AF7000FFB3D7 /* DoItCoach WatchKit App */;
-			targetProxy = 487886471CB2AF7000FFB3D7 /* PBXContainerItemProxy */;
-		};
-		487886571CB2AF7100FFB3D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 487886531CB2AF7100FFB3D7 /* DoItCoach WatchKit Extension */;
-			targetProxy = 487886561CB2AF7100FFB3D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4878863A1CB2AF7000FFB3D7 /* Main.storyboard */ = {
@@ -378,14 +215,6 @@
 				487886401CB2AF7000FFB3D7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		4878864A1CB2AF7000FFB3D7 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4878864B1CB2AF7000FFB3D7 /* Base */,
-			);
-			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -474,66 +303,6 @@
 			};
 			name = Release;
 		};
-		487886631CB2AF7100FFB3D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "DoItCoach WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Debug;
-		};
-		487886641CB2AF7100FFB3D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "DoItCoach WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Release;
-		};
-		487886671CB2AF7100FFB3D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = DoItCoach_WatchKit_Extension;
-				INFOPLIST_FILE = "DoItCoach WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Debug;
-		};
-		487886681CB2AF7100FFB3D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = DoItCoach_WatchKit_Extension;
-				INFOPLIST_FILE = "DoItCoach WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = org.corinnekrych.DoItCoach.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.1;
-			};
-			name = Release;
-		};
 		4878866B1CB2AF7100FFB3D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -568,22 +337,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		487886621CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				487886631CB2AF7100FFB3D7 /* Debug */,
-				487886641CB2AF7100FFB3D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		487886661CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				487886671CB2AF7100FFB3D7 /* Debug */,
-				487886681CB2AF7100FFB3D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		4878866A1CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -591,6 +344,7 @@
 				4878866C1CB2AF7100FFB3D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
