@@ -21,7 +21,7 @@ class TasksViewController: UIViewController {
         tableView.separatorStyle = .None
         loadSavedTasks()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timerFired:"), name: "TimerFired", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksViewController.timerFired(_:)), name: "TimerFired", object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,7 +42,7 @@ extension TasksViewController {
 extension TasksViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let id = segue.identifier where id == "viewTask" {
-            if let dest = segue.destinationViewController as? DetailledTaskViewController {
+            if let dest = segue.destinationViewController as? DetailedTaskViewController {
                 if let taskCell = sender as? TaskCell, let task = taskCell.task {
                     dest.task = task
                 }
@@ -116,7 +116,7 @@ extension TasksViewController {
             tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Bottom)
         }
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "finishAddingTask")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(TasksViewController.finishAddingTask))
     }
     
     func finishAddingTask() {
@@ -138,7 +138,7 @@ extension TasksViewController {
         saveTasks()
         tableView.reloadData()
         tableView.endEditing(true)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "beginAddingTask")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(TasksViewController.beginAddingTask))
         
         tableView.allowsSelection = true
     }

@@ -89,7 +89,7 @@ final public class TaskActivity: NSObject, Task {
     
     public func start() {
         startDate = NSDate()
-        timer = NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: Selector("stop"), userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(duration, target: self, selector: #selector(TaskActivity.stop), userInfo: nil, repeats: false)
     }
     
     public func stop() {

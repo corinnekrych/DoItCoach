@@ -17,7 +17,7 @@
 		487886771CB2B12C00FFB3D7 /* NewTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886741CB2B12C00FFB3D7 /* NewTaskCell.swift */; };
 		487886781CB2B12C00FFB3D7 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886751CB2B12C00FFB3D7 /* TaskCell.swift */; };
 		4878867C1CB2B14A00FFB3D7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886791CB2B14A00FFB3D7 /* CircleView.swift */; };
-		4878867D1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */; };
+		4878867D1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867A1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift */; };
 		4878867E1CB2B14A00FFB3D7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		487886741CB2B12C00FFB3D7 /* NewTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewTaskCell.swift; path = Views/NewTaskCell.swift; sourceTree = "<group>"; };
 		487886751CB2B12C00FFB3D7 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskCell.swift; path = Views/TaskCell.swift; sourceTree = "<group>"; };
 		487886791CB2B14A00FFB3D7 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailledTaskViewController.swift; sourceTree = "<group>"; };
+		4878867A1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedTaskViewController.swift; sourceTree = "<group>"; };
 		4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +85,7 @@
 				487886721CB2B11E00FFB3D7 /* Views */,
 				487886361CB2AF7000FFB3D7 /* AppDelegate.swift */,
 				487886791CB2B14A00FFB3D7 /* CircleView.swift */,
-				4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */,
+				4878867A1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift */,
 				4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */,
 				4878863A1CB2AF7000FFB3D7 /* Main.storyboard */,
 				4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */,
@@ -190,7 +190,7 @@
 				487886781CB2B12C00FFB3D7 /* TaskCell.swift in Sources */,
 				487886701CB2B10F00FFB3D7 /* Task.swift in Sources */,
 				487886711CB2B10F00FFB3D7 /* TasksManager.swift in Sources */,
-				4878867D1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift in Sources */,
+				4878867D1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift in Sources */,
 				487886771CB2B12C00FFB3D7 /* NewTaskCell.swift in Sources */,
 				4878867E1CB2B14A00FFB3D7 /* TasksViewController.swift in Sources */,
 				487886761CB2B12C00FFB3D7 /* ColorCell.swift in Sources */,

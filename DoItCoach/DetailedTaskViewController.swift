@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DetailledTaskViewController: UIViewController {
+public class DetailedTaskViewController: UIViewController {
     public var task: TaskActivity!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
@@ -28,8 +28,8 @@ public class DetailledTaskViewController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timerFired:"), name: "TimerFired", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("timerStarted:"), name: "TimerStarted", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DetailedTaskViewController.timerFired(_:)), name: "TimerFired", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DetailedTaskViewController.timerStarted(_:)), name: "TimerStarted", object: nil)
         let state = task.endDate != nil ? "done" :(task.startDate == nil ? "toStart" : "isStarted")
         if state == "isStarted" {
             statusLabel.text = "\(task.name)"

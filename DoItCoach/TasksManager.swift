@@ -13,10 +13,6 @@ public func saveTasks() {
 public func loadSavedTasks() {
     if let savedObjects = NSUserDefaults.standardUserDefaults().objectForKey("objects") as? NSData {
         let act = NSKeyedUnarchiver.unarchiveObjectWithData(savedObjects) as! [TaskActivity]
-        act.map({ (task: TaskActivity) -> TaskActivity in
-            print("act::\(task.name)::\(task.startDate)::\(task.endDate)::\(task.duration)::\(task.type)")
-            return task
-        })
         TasksManager.instance.tasks = act
     }
 }
