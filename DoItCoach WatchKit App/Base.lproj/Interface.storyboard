@@ -14,9 +14,36 @@
                             <color key="textColor" red="0.43456700539999998" green="0.68367626069999998" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" weight="ultraLight" pointSize="17"/>
                         </label>
+                        <group width="1" height="0.90000000000000002" alignment="center" verticalAlignment="center" backgroundImage="Time11" id="vCw-jh-eeQ">
+                            <items>
+                                <button alignment="center" verticalAlignment="center" id="02V-fT-BaD">
+                                    <group key="contentGroup" width="1" alignment="left" layout="vertical" id="T2i-ce-FNG">
+                                        <items>
+                                            <imageView alignment="center" verticalAlignment="center" image="Start" id="kDH-Gd-vli"/>
+                                            <timer alignment="center" verticalAlignment="center" hidden="YES" id="pVs-1H-YtZ">
+                                                <color key="textColor" red="0.43456700539999998" green="0.68367626069999998" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" weight="ultraLight" pointSize="27"/>
+                                                <calendarUnit key="units" minute="YES" second="YES"/>
+                                            </timer>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <action selector="onStartButton" destination="AgC-eL-Hgc" id="Pvh-KW-tee"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
+                    <connections>
+                        <outlet property="group" destination="vCw-jh-eeQ" id="ric-ey-jRb"/>
+                        <outlet property="startButton" destination="02V-fT-BaD" id="lwJ-MH-K04"/>
+                        <outlet property="startButtonImage" destination="kDH-Gd-vli" id="v7C-h3-0KJ"/>
+                        <outlet property="taskNameLabel" destination="GN6-ih-B5g" id="c19-ti-9qI"/>
+                        <outlet property="timer" destination="pVs-1H-YtZ" id="EmF-Zl-HSK"/>
+                    </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="390" y="487.25"/>
         </scene>
     </scenes>
 </document>

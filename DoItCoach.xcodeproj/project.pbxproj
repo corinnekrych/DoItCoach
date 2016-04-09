@@ -26,6 +26,8 @@
 		4878867C1CB2B14A00FFB3D7 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487886791CB2B14A00FFB3D7 /* CircleView.swift */; };
 		4878867D1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867A1CB2B14A00FFB3D7 /* DetailedTaskViewController.swift */; };
 		4878867E1CB2B14A00FFB3D7 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */; };
+		488826521CB943630055C35B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866E1CB2B10F00FFB3D7 /* Task.swift */; };
+		488826531CB943630055C35B /* TasksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4878866F1CB2B10F00FFB3D7 /* TasksManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -323,6 +325,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488826521CB943630055C35B /* Task.swift in Sources */,
+				488826531CB943630055C35B /* TasksManager.swift in Sources */,
 				484803B51CB90E960035E7D1 /* ExtensionDelegate.swift in Sources */,
 				484803B31CB90E960035E7D1 /* InterfaceController.swift in Sources */,
 			);
@@ -566,6 +570,7 @@
 				484803BE1CB90E960035E7D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		484803C01CB90E960035E7D1 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +579,7 @@
 				484803C21CB90E960035E7D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4878862E1CB2AF7000FFB3D7 /* Build configuration list for PBXProject "DoItCoach" */ = {
 			isa = XCConfigurationList;
