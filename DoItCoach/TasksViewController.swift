@@ -19,7 +19,7 @@ class TasksViewController: UIViewController {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.blackColor()
         tableView.separatorStyle = .None
-        loadSavedTasks()
+        //loadSavedTasks()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksViewController.timerFired(_:)), name: "TimerFired", object: nil)
     }
