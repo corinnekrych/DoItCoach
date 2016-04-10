@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet var taskNameLabel: WKInterfaceLabel!
@@ -37,6 +37,7 @@ class InterfaceController: WKInterfaceController {
             startButtonImage.setHidden(true) // [4]
             timer.setHidden(false) // [5]
             taskNameLabel.setText(currentTask.name)
+            sendToPhone(currentTask)
         }
     }
     
@@ -48,6 +49,7 @@ class InterfaceController: WKInterfaceController {
         current.stop()
         group.stopAnimating()
         display(TasksManager.instance.currentTask)
+        sendToPhone(current)
     }
     
     override func awakeWithContext(context: AnyObject?) {
@@ -74,6 +76,18 @@ class InterfaceController: WKInterfaceController {
         }
         group.setBackgroundImageNamed("Time0")
         taskNameLabel.setText(task.name) // [2]
+    }
+    func sendToPhone(task: TaskActivity) {
+        let applicationData = ["task": task.toDictionary()]
+        if WCSession.defaultSession().reachable {
+            WCSession.defaultSession().sendMessage(applicationData, replyHandler: {(dict: [String : AnyObject]) -> Void in
+                // handle reply from iPhone app here
+                print("iOS APP KNOWS Watch \(dict)")
+                }, errorHandler: {(error) -> Void in
+                    // catch any errors here
+                    print("OOPs... Watch \(error)")
+            })
+        } 
     }
 
 }
