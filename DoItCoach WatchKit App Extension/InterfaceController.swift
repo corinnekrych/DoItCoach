@@ -54,7 +54,28 @@ class InterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(InterfaceController.taskStarted(_:)), name: "CurrentTaskStarted", object: nil)
         display(TasksManager.instance.currentTask)
+    }
+    
+    func taskStarted(note: NSNotification) { // task started from ios app
+        if let userInfo = note.object,
+            let taskFromNotification = userInfo["task"] as? TaskActivity,
+            let current = TasksManager.instance.currentTask
+            where taskFromNotification.name == current.name {
+            print("Replay")
+            replayAnimation(taskFromNotification)
+        }
+    }
+    
+    func replayAnimation(task: TaskActivity) {
+        if let startDate = task.startDate  {
+            let timeElapsed = NSDate().timeIntervalSinceDate(startDate) // issue with clock diff, this interval might be negative
+            let diff = timeElapsed < 0 ? abs(timeElapsed) : timeElapsed
+            let imageRangeRemaining = (diff)*90/task.duration
+            self.group.setBackgroundImageNamed("Time")
+            self.group.startAnimatingWithImagesInRange(NSMakeRange(Int(imageRangeRemaining), 90), duration: task.duration - diff, repeatCount: 1)
+        }
     }
 
     override func willActivate() {

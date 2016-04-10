@@ -30,4 +30,24 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     }
 
 }
-extension ExtensionDelegate: WCSessionDelegate {}
+
+// MARK: WCSessionDelegate
+extension ExtensionDelegate: WCSessionDelegate {
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        if let task = applicationContext["task"] as? [String : AnyObject] {
+            if let name = task["name"] as? String,
+               let startDate = task["startDate"] as? Double {
+                let tasksFound = TasksManager.instance.tasks?.filter{$0.name == name}
+                let task: TaskActivity?
+                if let tasksFound = tasksFound where tasksFound.count > 0 {
+                    task = tasksFound[0] as TaskActivity
+                    task?.startDate = NSDate(timeIntervalSinceReferenceDate: startDate)
+                    dispatch_async(dispatch_get_main_queue()) { // send notif in foregroung to ntfiy ui if app running
+                        print("Notify CurrentTaskStarted")
+                        NSNotificationCenter.defaultCenter().postNotificationName("CurrentTaskStarted", object: ["task":task!])
+                    }
+                }
+            }
+        }
+    }
+}

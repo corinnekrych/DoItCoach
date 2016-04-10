@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 public class DetailedTaskViewController: UIViewController {
     public var task: TaskActivity!
@@ -63,6 +64,7 @@ public class DetailedTaskViewController: UIViewController {
         if let userInfo = note.object, let taskFromNotification = userInfo["task"] as? TaskActivity where taskFromNotification.name == self.task.name {
             if let sender = userInfo["sender"] as? String where sender == "ios" {
                 task.start()
+                sendTaskToAppleWatch(task)
             }
             saveTasks()
             self.startButton.setTitle("Stop", forState: .Normal)
@@ -70,6 +72,12 @@ public class DetailedTaskViewController: UIViewController {
             self.circleView.animateCircle(0, color:taskFromNotification.type.color, duration: taskFromNotification.duration)
         }
         print("iOS app::TimerStarted::note::\(note)")
+    }
+    
+    func sendTaskToAppleWatch(task: TaskActivity) {
+        if WCSession.defaultSession().paired && WCSession.defaultSession().watchAppInstalled {
+            try! WCSession.defaultSession().updateApplicationContext(["task": task.toDictionary()])
+        }
     }
 }
 
