@@ -17,4 +17,5 @@ With DoItCoach, plan your day with some tasks, plan for some healthy breaks in b
 open DoItCoach.xcodeproj
 ```
 ## Run it
+![DoIt](step5.gif)
 Et voila!

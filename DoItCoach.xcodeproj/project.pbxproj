@@ -116,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4806B9031CC0E72100183712 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */,
+				4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		4878862A1CB2AF7000FFB3D7 = {
 			isa = PBXGroup;
 			children = (
@@ -140,11 +149,9 @@
 		487886351CB2AF7000FFB3D7 /* DoItCoach */ = {
 			isa = PBXGroup;
 			children = (
+				4806B9031CC0E72100183712 /* Controllers */,
 				487886721CB2B11E00FFB3D7 /* Views */,
 				487886361CB2AF7000FFB3D7 /* AppDelegate.swift */,
-				487886791CB2B14A00FFB3D7 /* CircleView.swift */,
-				4878867A1CB2B14A00FFB3D7 /* DetailledTaskViewController.swift */,
-				4878867B1CB2B14A00FFB3D7 /* TasksViewController.swift */,
 				4878863A1CB2AF7000FFB3D7 /* Main.storyboard */,
 				4878863D1CB2AF7000FFB3D7 /* Assets.xcassets */,
 				4878863F1CB2AF7000FFB3D7 /* LaunchScreen.storyboard */,
@@ -186,6 +193,7 @@
 		487886721CB2B11E00FFB3D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				487886791CB2B14A00FFB3D7 /* CircleView.swift */,
 				487886731CB2B12C00FFB3D7 /* ColorCell.swift */,
 				487886741CB2B12C00FFB3D7 /* NewTaskCell.swift */,
 				487886751CB2B12C00FFB3D7 /* TaskCell.swift */,
@@ -575,6 +583,7 @@
 				487886641CB2AF7100FFB3D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		487886661CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +592,7 @@
 				487886681CB2AF7100FFB3D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4878866A1CB2AF7100FFB3D7 /* Build configuration list for PBXNativeTarget "DoItCoach" */ = {
 			isa = XCConfigurationList;
@@ -591,6 +601,7 @@
 				4878866C1CB2AF7100FFB3D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
