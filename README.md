@@ -22,9 +22,14 @@ Et voila!
 
 ## Tutorials
 [Watch tutorial 1: Which app?](http://corinnekrych.blogspot.fr/2016/04/watch-tutorial-1-which-app.html)
+
 [Watch tutorial 2: Watch Architecture](http://corinnekrych.blogspot.fr/2016/04/watch-tutorial-2-watch-architecture.html)
+
 [Watch tutorial 3: Layout](http://corinnekrych.blogspot.fr/2016/04/watch-tutorial-3-layout.html)
+
 [Watch tutorial 4: Animation](http://corinnekrych.blogspot.fr/2016/04/watch-tutorial-4-animation.html)
+
 [Watch tutorial 5: Watch Connectivity - Direct Message](http://corinnekrych.blogspot.fr/2016/04/watch-tutorial-5-watch-connectivity.html)
+
 [Watch tutorial 6: Watch Connectivity - Application Context](http://corinnekrych.blogspot.fr/2016/04/watch-tutorial-6-watch-connectivity.html)
        https://github.com/corinnekrych/DoItCoach
